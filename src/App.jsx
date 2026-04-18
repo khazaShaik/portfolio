@@ -1,0 +1,50 @@
+import useDarkMode from './hooks/useDarkMode';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HiringHighlights from './components/HiringHighlights';
+import About from './components/About';
+import Projects from './components/Projects';
+import Skills from './components/Skills';
+import Experience from './components/Experience';
+import Certifications from './components/Certifications';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import ScrollProgress from './components/ScrollProgress';
+import ScrollToTop from './components/ScrollToTop';
+import TechMarquee from './components/TechMarquee';
+
+/**
+ * Flow follows hiring psychology: hook → scannable proof → narrative → outcomes → depth → credentials → action.
+ */
+export default function App() {
+  const { isDark, toggle } = useDarkMode();
+
+  return (
+    <div className="relative flex min-h-dvh w-full flex-col overflow-x-hidden bg-white text-black antialiased tracking-[-0.02em] dark:bg-ink-950 dark:text-glow-100">
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+
+      <ScrollProgress />
+      <Navbar isDark={isDark} toggleTheme={toggle} />
+
+      <main id="main-content" className="flex flex-1 flex-col">
+        <Hero />
+        <HiringHighlights />
+        <About />
+        <Projects />
+        <Skills />
+        <Experience />
+        <Certifications />
+        <Contact />
+      </main>
+
+      <div className="border-t border-neutral-200/80 bg-white dark:border-white/[0.06] dark:bg-ink-950">
+        <TechMarquee />
+      </div>
+
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+}
