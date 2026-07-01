@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import useDarkMode from './hooks/useDarkMode';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,12 +13,15 @@ import Footer from './components/Footer';
 import ScrollProgress from './components/ScrollProgress';
 import ScrollToTop from './components/ScrollToTop';
 import TechMarquee from './components/TechMarquee';
+import DemoDashboard from './components/DemoDashboard';
 
 /**
  * Flow follows hiring psychology: hook → scannable proof → narrative → outcomes → depth → credentials → action.
  */
 export default function App() {
   const { isDark, toggle } = useDarkMode();
+  const [isDemoOpen, setIsDemoOpen] = useState(false);
+  const [demoProject, setDemoProject] = useState('');
 
   return (
     <div className="relative flex min-h-dvh w-full flex-col overflow-x-hidden bg-white text-black antialiased tracking-[-0.02em] dark:bg-ink-950 dark:text-glow-100">
@@ -32,7 +36,10 @@ export default function App() {
         <Hero />
         <HiringHighlights />
         <About />
-        <Projects />
+        <Projects onLaunchDemo={(title) => {
+          setDemoProject(title);
+          setIsDemoOpen(true);
+        }} />
         <Skills />
         <Experience />
         <Certifications />
@@ -45,6 +52,12 @@ export default function App() {
 
       <Footer />
       <ScrollToTop />
+
+      <DemoDashboard 
+        isOpen={isDemoOpen} 
+        onClose={() => setIsDemoOpen(false)} 
+        initialProject={demoProject} 
+      />
     </div>
   );
 }

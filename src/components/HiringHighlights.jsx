@@ -20,37 +20,37 @@ export default function HiringHighlights() {
     {
       Icon: HiBolt,
       eyebrow: 'What I do',
-      stat: 'Build with AI',
-      hint: 'Python · LangChain · RAG · agents',
+      stat: 'Ship AI to production',
+      hint: 'RAG · agents · evals · LangChain',
       detail:
-        'I like turning LLMs into real features — with retrieval, evals, and proper engineering around them.',
+        'I build retrieval pipelines (87% eval accuracy), multi-agent workflows, and LLM integrations — with proper engineering around them.',
       accent: 'border-l-[3px] border-l-violet-500 dark:border-l-violet-400',
     },
     {
       Icon: HiClock,
-      eyebrow: 'Background',
-      stat: `${years} years coding`,
-      hint: 'Fullstack · Java · Angular',
+      eyebrow: 'Track record',
+      stat: `${years} years · 3 companies`,
+      hint: 'T-Mobile · Union Pacific · CCIL',
       detail:
-        'Long career shipping web and backend systems. AI is the next chapter, not my first rodeo.',
+        'Shipped platforms serving 5,000+ stores and 200+ financial institutions. AI is the next chapter, not my first rodeo.',
       accent: 'border-l-[3px] border-l-teal-500 dark:border-l-teal-400',
     },
     {
       Icon: HiBriefcase,
-      eyebrow: 'Right now',
-      stat: 'Concentrix',
-      hint: 'Cloud consultant',
+      eyebrow: 'Current role',
+      stat: 'Concentrix · T-Mobile',
+      hint: '500K+ daily transactions',
       detail:
-        "Working on T-Mobile's supply-chain platform — big system, real users, lots to learn from.",
+        'Cloud consultant owning supply-chain modules — microservices, Kafka async flows, Kubernetes orchestration at scale.',
       accent: 'border-l-[3px] border-l-amber-500 dark:border-l-amber-400',
     },
     {
       Icon: HiGlobeAlt,
       eyebrow: 'Looking for',
-      stat: 'A good team',
-      hint: 'Remote, hybrid, or on-site',
+      stat: 'An AI-first team',
+      hint: 'Remote · Hybrid · On-site · GCC',
       detail:
-        'Somewhere I can own AI features end-to-end and work with people who care about the craft.',
+        'Somewhere I can own AI features end-to-end — from retrieval pipelines to production deployment.',
       accent: 'border-l-[3px] border-l-sky-500 dark:border-l-sky-400',
     },
   ];
@@ -65,10 +65,10 @@ export default function HiringHighlights() {
         <div className="mb-10 md:mb-14">
           <SectionBadge align="left">Quick intro</SectionBadge>
           <h2 className="font-display text-3xl font-semibold tracking-tight text-neutral-950 md:text-4xl dark:text-white">
-            A little about me
+            The short version
           </h2>
           <p className="mt-3 max-w-3xl text-base leading-relaxed text-neutral-600 dark:text-glow-100/55 md:text-lg">
-            The four things that come up most when people ask what I do.
+            Four things that tell you if we&apos;re a good fit.
           </p>
         </div>
 

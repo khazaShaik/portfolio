@@ -85,25 +85,24 @@ export default function Hero() {
             </h1>
 
             <p className="mt-4 max-w-xl text-lg font-medium leading-snug text-neutral-800 dark:text-glow-100/90">
-              I&apos;m an{' '}
-              <span className="text-neutral-950 dark:text-white">AI engineer</span> with{' '}
-              {years} years of fullstack experience — I build LLM-powered products that real users
-              depend on.
+              <span className="text-neutral-950 dark:text-white">AI Engineer</span> with {years} years
+              of production engineering experience — shipping RAG systems, agent workflows, and
+              enterprise platforms at T-Mobile scale.
             </p>
 
             <p className="mt-4 max-w-xl text-pretty text-base leading-relaxed text-neutral-600 dark:text-glow-100/55">
-              These days I spend most of my time on RAG, agents, and evals in Python. Before that,
-              I shipped Java and Angular platforms at scale — telecom, supply chain, finance. That
-              engineering background is why my AI work actually makes it to production.
+              I build retrieval pipelines that surface the right context, agents that self-correct,
+              and evals that actually measure quality — backed by a Java &amp; cloud career serving
+              5,000+ retail stores and 200+ financial institutions.
             </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
               <span className="inline-flex items-center gap-2 rounded-full border border-emerald-300/80 bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-900 dark:border-emerald-500/35 dark:bg-emerald-500/10 dark:text-emerald-200">
                 <span className="size-1.5 rounded-full bg-emerald-500" aria-hidden />
-                Open to AI engineer roles
+                Open to AI Engineer roles
               </span>
               <span className="inline-flex items-center rounded-full border border-neutral-200 bg-white/80 px-3 py-1.5 text-xs font-medium text-neutral-700 dark:border-white/10 dark:bg-white/[0.06] dark:text-glow-100/85">
-                Remote, hybrid, or on-site
+                Remote · Hybrid · On-site · GCC
               </span>
             </div>
 

@@ -8,7 +8,7 @@ import { SCROLL_MARGIN_CLASS } from '../constants/layout';
 // Curated top-level filter tags — AI listed first since I'm targeting AI Eng roles
 const FILTER_TAGS = ['All', 'AI', 'Enterprise', 'Featured', 'Java', 'Spring Boot', 'Angular'];
 
-export default function Projects() {
+export default function Projects({ onLaunchDemo }) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '-100px' });
   const [activeFilter, setActiveFilter] = useState('All');
@@ -151,6 +151,16 @@ export default function Projects() {
                     >
                       <FaExternalLinkAlt className="w-3.5 h-3.5" />
                     </a>
+                  )}
+                  {project.hasInteractiveDemo && (
+                    <button
+                      type="button"
+                      onClick={() => onLaunchDemo && onLaunchDemo(project.title)}
+                      className="ml-auto flex items-center gap-1.5 text-xs font-semibold px-3 py-1 rounded-full bg-teal-500/10 text-teal-600 hover:bg-teal-500/20 dark:bg-teal-400/10 dark:text-teal-300 dark:hover:bg-teal-400/20 active:scale-[0.98] transition-all cursor-pointer"
+                    >
+                      <span>Demo Simulator</span>
+                      <FaExternalLinkAlt className="w-2.5 h-2.5" />
+                    </button>
                   )}
                 </div>
               </motion.article>

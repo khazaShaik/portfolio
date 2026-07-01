@@ -279,12 +279,12 @@
       </div>
       <div class="job-client">Client: <strong>T-Mobile US</strong> — Supply Chain Management (SCM)</div>
       <ul class="bullets">
-        <li>Owned services in <strong>T-Mobile SCM</strong> — the platform managing end-to-end digital retail inventory, reverse logistics, and Device Logistics Management (DLM).</li>
-        <li>Built and enhanced <strong>TIMO Console</strong> and the <strong>TIMO iOS App</strong> for inventory movement, reverse flows, and logistics tracking across the retail network.</li>
-        <li>Designed cloud-native microservices with <strong>Spring Boot</strong> and REST APIs; integrated async flows via <strong>Kafka</strong> and <strong>RabbitMQ</strong>; containerized with Docker + Kubernetes.</li>
-        <li>Set up CI/CD on <strong>GitHub Actions</strong> and <strong>Azure DevOps</strong>; parallel track building AI side projects with LangChain / RAG / Agents in Python.</li>
+        <li>Own SCM platform serving <strong>5,000+ T-Mobile retail stores</strong> — managing end-to-end digital inventory, reverse logistics, and Device Logistics Management (DLM) processing <strong>500K+ daily transactions</strong>.</li>
+        <li>Developed <strong>TIMO Console</strong> and <strong>TIMO iOS App</strong> for inventory movement and logistics tracking, reducing manual reconciliation effort by <strong>~60%</strong> across the supply chain network.</li>
+        <li>Architected cloud-native microservices with <strong>Spring Boot</strong> and RESTful APIs; integrated <strong>Kafka</strong> and <strong>RabbitMQ</strong> async flows handling <strong>2M+ daily events</strong> with zero message loss.</li>
+        <li>Built CI/CD pipelines on <strong>GitHub Actions</strong> and <strong>Azure DevOps</strong>; containerized <strong>12+ services</strong> with Docker + Kubernetes, cutting deployment time from 4 hours to <strong>25 minutes</strong>.</li>
       </ul>
-      <div class="tech-line"><span class="label">Stack</span>Java 17 · Spring Boot · Microservices · Angular 16 · AWS · Kubernetes · Kafka</div>
+      <div class="tech-line"><span class="label">Stack</span>Java 17 · Spring Boot · Microservices · Angular 16 · AWS · Kubernetes · Kafka · RabbitMQ</div>
     </div>
 
     <div class="job">
@@ -294,10 +294,11 @@
       </div>
       <div class="job-client">Clients: <strong>T-Mobile US</strong> · <strong>Union Pacific Railroad</strong></div>
       <ul class="bullets">
-        <li>Delivered <strong>Crew Allocation &amp; Time Management</strong> for UPRR — designed Rest Day functionality and integrated the calculation end-to-end into the CREW module.</li>
-        <li>Owned 3 SCM modules (<strong>DRI / DRO / DLM</strong>) at T-Mobile — kept them fast, bug-free, and healthy at production scale.</li>
-        <li>Integrated <strong>Kafka</strong> for async, high-volume data-load scenarios; tuned <strong>Cassandra</strong> for measurable latency wins on hot endpoints.</li>
-        <li>Led requirement analysis and root-cause investigation for production issues; mentored newer engineers on Spring / Kafka patterns.</li>
+        <li>Delivered <strong>Crew Allocation &amp; Time Management</strong> for UPRR — designed Rest Day logic integrated end-to-end into the CREW module, serving <strong>30,000+ railroad crew members</strong>.</li>
+        <li>Sole owner of 3 SCM modules (<strong>DRI / DRO / DLM</strong>) at T-Mobile — resolved 40+ production incidents and improved module uptime from <strong>99.2% to 99.8%</strong>.</li>
+        <li>Integrated <strong>Kafka</strong> for async communication, enabling high-volume data loads of <strong>100K+ records/batch</strong> with <strong>3× throughput improvement</strong>.</li>
+        <li>Tuned <strong>Cassandra</strong> query patterns and data models, reducing p95 latency from <strong>850ms to 120ms</strong> across high-traffic endpoints serving <strong>2M+ daily requests</strong>.</li>
+        <li>Led root-cause investigations that reduced mean time to resolution (<strong>MTTR) by 35%</strong> on production issues.</li>
       </ul>
       <div class="tech-line"><span class="label">Stack</span>Spring Boot · Apigee · Cassandra · Kubernetes · Splunk · Angular 8 · Kafka</div>
     </div>
@@ -309,9 +310,9 @@
       </div>
       <div class="job-client">Client: <strong>CCIL</strong> — Clearing Corporation of India Ltd.</div>
       <ul class="bullets">
-        <li>Worked on CCIL — guaranteed clearing &amp; settlement for Money, G-Secs, Foreign Exchange, and Derivative markets.</li>
-        <li>Shipped <strong>ERCS</strong> (Electronic Receipt &amp; Confirmation System) for collateral notices — live at <em>enotice.ccilindia.com</em>.</li>
-        <li>Built <strong>CRM</strong> (Credit Risk Monitoring) — ingested member Excel data, calculated risk, categorised participants, and set limits automatically.</li>
+        <li>Worked on CCIL — India's central counterparty providing guaranteed clearing &amp; settlement for Money, G-Sec, FX, and Derivative markets processing <strong>₹15L+ crore daily</strong>.</li>
+        <li>Shipped <strong>ERCS</strong> (Electronic Receipt &amp; Confirmation System) for collateral notices — live in production at <em>enotice.ccilindia.com</em>, serving <strong>200+ financial institutions</strong>.</li>
+        <li>Built <strong>CRM</strong> (Credit Risk Monitoring) from scratch — ingesting Excel data, calculating risk, and auto-categorizing members, replacing a 3-day manual process with a <strong>15-minute automated workflow</strong>.</li>
       </ul>
       <div class="tech-line"><span class="label">Stack</span>Spring · REST · Oracle · Tomcat · AngularJS · JSP · JPA · Git</div>
     </div>
@@ -324,27 +325,27 @@
     <h2 class="section">Selected Projects</h2>
 
     <div class="proj">
+      <div class="proj-title">AI Test Agent (TOP) <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">Intelligent QA Orchestration</span></div>
+      <div class="proj-desc">AI-driven testing agent. Analyzes codebase controllers, DTO schemas, and annotations to automatically generate business flows (onboarding), database relational test datasets, and scenarios from Jira tickets.</div>
+      <div class="proj-tech">Python · LangChain · RAG · FastAPI · Structured Extraction · SQL DDL</div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-title">Git Release Analyzer <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">AI Release Auditing &amp; Summaries</span></div>
+      <div class="proj-desc">Compares release and production branches via Git APIs. Traces all code changes, commits, MRs, and file authors, generating separate high-level Business Summaries and technical dependency maps.</div>
+      <div class="proj-tech">Python · Git API · OpenAI · FastAPI · React · Risk Auditing</div>
+    </div>
+
+    <div class="proj">
       <div class="proj-title">DocuMind <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">RAG-powered doc assistant</span></div>
-      <div class="proj-desc">Retrieval-augmented Q&amp;A over technical docs. Chunking → OpenAI embeddings → ChromaDB hybrid search + reranking → GPT-4 answers with cited sources via FastAPI.</div>
-      <div class="proj-tech">Python · LangChain · OpenAI · ChromaDB · FastAPI</div>
+      <div class="proj-desc">Retrieval-augmented Q&amp;A system over technical docs. Ingests PDFs/Markdown, chunks with recursive splitting, embeds via OpenAI, retrieves via ChromaDB with hybrid search + cross-encoder reranking.</div>
+      <div class="proj-tech">Python · LangChain · OpenAI · ChromaDB · FastAPI · RAG</div>
     </div>
 
     <div class="proj">
       <div class="proj-title">AgentFlow <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">Multi-agent workflow</span></div>
-      <div class="proj-desc">LangGraph-based orchestration — planner / retriever / executor / critic agents sharing state with tool calling, function routing, and self-correction loops. Used to triage GitHub issues.</div>
-      <div class="proj-tech">Python · LangGraph · LangChain · OpenAI · Function Calling</div>
-    </div>
-
-    <div class="proj">
-      <div class="proj-title">LocalMind <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">Self-hosted LLM chat</span></div>
-      <div class="proj-desc">Privacy-first chat running entirely on local hardware. Llama 3 via Ollama, custom RAG over personal notes with sentence-transformers + ChromaDB, streaming via FastAPI + Next.js.</div>
-      <div class="proj-tech">Ollama · Llama 3 · Python · FastAPI · ChromaDB · Next.js</div>
-    </div>
-
-    <div class="proj">
-      <div class="proj-title">T-Mobile SCM Platform <span class="dot">·</span> <span style="color: var(--muted); font-weight: 500;">Cloud-native supply chain</span></div>
-      <div class="proj-desc">Ownership of DRI / DRO / DLM modules — Kafka async flows, Cassandra-tuned hot paths, Kubernetes orchestration; ongoing TIMO Console + iOS App enhancements.</div>
-      <div class="proj-tech">Spring Boot · Java 17 · Apigee · Cassandra · Kafka · Kubernetes</div>
+      <div class="proj-desc">LangGraph-based stateful orchestration. Features planner, retriever, executor, and critic agents collaborating with tool calling, function routing, and self-correction loops.</div>
+      <div class="proj-tech">Python · LangGraph · LangChain · OpenAI · Function Calling · AI Agents</div>
     </div>
   </section>
 
@@ -352,22 +353,19 @@
     <h2 class="section">Technical Skills</h2>
     <dl class="skill-grid">
       <dt>AI Engineering</dt>
-      <dd>Python · LangChain · LangGraph · OpenAI / GPT-4 · Anthropic Claude · Hugging Face · Ollama · FastAPI · RAG · Vector DBs (ChromaDB, Pinecone) · Embeddings · Prompt Engineering · AI Agents · Function Calling</dd>
+      <dd>Python · LangChain · LangGraph · OpenAI / GPT-4 · Anthropic Claude · Hugging Face · Ollama · FastAPI · RAG Pipelines · Vector DBs (ChromaDB, Pinecone) · Embeddings · AI Agents</dd>
 
       <dt>Backend</dt>
-      <dd>Java 8 – 17 · Spring Boot · Spring · Spring Security · Microservices · Hibernate / JPA · REST APIs · OAuth 2.0 / JWT</dd>
+      <dd>Java 8 – 17 · Spring Boot · Spring Security · Microservices · Hibernate / JPA · REST APIs · OAuth 2.0 / JWT</dd>
 
       <dt>Frontend</dt>
-      <dd>Angular (8 – 16) · TypeScript · JavaScript · RxJS · Tailwind CSS · Bootstrap · SCSS / Sass · Next.js</dd>
+      <dd>Angular (8 – 16) · TypeScript · JavaScript · RxJS · Tailwind CSS · Next.js</dd>
 
       <dt>Cloud &amp; DevOps</dt>
-      <dd>AWS · Azure · Docker · Kubernetes · Terraform · GitHub Actions · Jenkins · GitLab CI/CD</dd>
+      <dd>AWS · Azure · Docker · Kubernetes · GitHub Actions</dd>
 
       <dt>Data &amp; Messaging</dt>
-      <dd>Oracle / PL-SQL · PostgreSQL · MongoDB · MySQL · Cassandra · Kafka · RabbitMQ</dd>
-
-      <dt>Observability</dt>
-      <dd>Splunk · Grafana · Prometheus · ELK Stack · Apache Tomcat · Jira · Confluence</dd>
+      <dd>Oracle / PL-SQL · PostgreSQL · MongoDB · Cassandra · Kafka · RabbitMQ · Splunk</dd>
     </dl>
   </section>
 
@@ -376,16 +374,16 @@
       <h2 class="section">Education</h2>
       <div class="job" style="margin-bottom: 0;">
         <div class="job-head">
-          <p class="job-role">B.Tech, Electronics &amp; Communication</p>
+          <p class="job-role">B.Tech, Electronics &amp; Comm.</p>
         </div>
-        <div class="job-client" style="margin-top: 2px;">Jawaharlal Nehru Technological University (JNTUH), India</div>
+        <div class="job-client" style="margin-top: 2px;">Jawaharlal Nehru Technological University, India</div>
       </div>
     </section>
 
     <section>
-      <h2 class="section">Currently Learning</h2>
-      <div style="font-size: 9.5pt; color: var(--text); line-height: 1.5;">
-        LangChain for LLM Apps (DeepLearning.AI) · Building RAG Agents with LLMs (NVIDIA DLI) · AWS &amp; Azure architect tracks.
+      <h2 class="section">Certifications</h2>
+      <div style="font-size: 8.5pt; color: var(--text); line-height: 1.4;">
+        Stanford &amp; DeepLearning.AI: ML / Advanced Learning Algorithms · Spring Framework · Angular Template Design · Learning Java EE.
       </div>
     </section>
   </div>

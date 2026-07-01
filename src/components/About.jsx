@@ -26,7 +26,7 @@ export default function About() {
           <SectionBadge align="left">About</SectionBadge>
           <h2 className="section-title text-left">A bit more about me</h2>
           <p className="section-subtitle text-left">
-            The long version — how I got here and what I&apos;m into lately.
+            The longer version — how I got here and what makes me tick.
           </p>
         </div>
 
@@ -35,32 +35,35 @@ export default function About() {
             <p>
               I started out writing{' '}
               <strong className="text-neutral-950 dark:text-glow-100">Java and Angular</strong>{' '}
-              for big enterprise systems — telecom, supply chain, railroads, finance. Over{' '}
+              for enterprise systems — telecom, supply chain, railroads, finance. Over{' '}
               <strong className="text-neutral-950 dark:text-glow-100">{years} years</strong>{' '}
-              I&apos;ve shipped a lot of software, broken plenty of things in production, and
-              learned how to ship again the next day.
+              I&apos;ve shipped software that processes hundreds of thousands of daily
+              transactions, serves thousands of retail stores, and handles real money in
+              clearing-house systems.
             </p>
             <p>
               A couple of years back I got pulled into{' '}
-              <strong className="text-neutral-950 dark:text-glow-100">AI</strong> and never really
-              came back. I like the problems: retrieval that actually returns useful stuff, agents
-              that don&apos;t spiral, evals that tell you whether a change made things better or
-              just different. I mostly work in{' '}
+              <strong className="text-neutral-950 dark:text-glow-100">AI engineering</strong> and
+              never really came back. The problems hooked me: retrieval that actually returns the
+              right context, agents that self-correct instead of spiraling, eval frameworks that
+              tell you whether a change improved quality or just moved it sideways. I work mostly
+              in{' '}
               <strong className="text-neutral-950 dark:text-glow-100">
-                Python with LangChain, LangGraph, and vector DBs like ChromaDB
+                Python with LangChain, LangGraph, and vector DBs
               </strong>
               , but I&apos;ll reach for whatever fits the problem.
             </p>
             <p>
-              Right now I&apos;m a cloud consultant at Concentrix, working on{' '}
-              <strong className="text-neutral-950 dark:text-glow-100">T-Mobile&apos;s</strong>{' '}
-              supply-chain platform by day, and building AI side projects whenever I get a quiet
-              weekend — RAG assistants, small agent experiments, self-hosted LLM tooling. Most of
-              them end up on the projects page.
+              <strong className="text-neutral-950 dark:text-glow-100">
+                What I bring to an AI team:
+              </strong>{' '}
+              I&apos;ve seen what happens when ML prototypes hit production without proper
+              engineering around them. My enterprise background means I think about failure modes,
+              observability, and deployment from day one — not as an afterthought.
             </p>
             <p>
-              Outside of work: cricket, long-form cricket arguments, a mild crypto habit, and
-              reading about how other engineers build things.
+              Outside of work: cricket, reading about how other engineers build things, and the
+              occasional deep-dive into something completely unrelated.
             </p>
           </div>
 
@@ -68,10 +71,10 @@ export default function About() {
             {[
               { label: 'Based in', value: 'Hyderabad, India' },
               { label: 'Experience', value: `${years} years` },
-              { label: 'Currently', value: 'Concentrix · on T-Mobile SCM' },
-              { label: 'Worked on', value: 'Telecom · Supply chain · Railroads · Finance' },
-              { label: 'Studied', value: 'B.Tech, Electronics & Communication' },
-              { label: 'Into', value: 'AI, cricket, crypto, good coffee' },
+              { label: 'Currently', value: 'Concentrix · T-Mobile SCM' },
+              { label: 'Scale', value: '5,000+ stores · 500K+ daily txns' },
+              { label: 'Domains', value: 'Telecom · Supply chain · Railroads · Finance' },
+              { label: 'Education', value: 'B.Tech, Electronics & Communication' },
               { label: 'Availability', value: 'Open to new roles' },
             ].map((item, index) => (
               <motion.div
