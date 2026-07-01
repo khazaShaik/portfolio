@@ -132,8 +132,54 @@ const MOCK_SCENARIOS_OUTPUT = {
 };
 
 const MOCK_CHAT_FLOW = [
-  { q: "Generate cancellation scenarios", r: "### Cancellation Scenarios:\n* **Positive**: Cancel an unpaid order → Verify status becomes 'CANCELLED' and stock is released to warehouse.\n* **Negative**: Cancel a 'SHIPPED' order → API must return HTTP 400 Bad Request.\n* **Edge Case**: Cancel order while payment is processing → System locks transaction and holds until invoice settlement clears." },
-  { q: "Test Transfer Order with invalid warehouse", r: "### Transfer Order Edge Cases:\n* **Negative Validation**: Attempt transfer between 'WH-001' and non-existent 'WH-999'.\n* **Expected Result**: Validation fails with code `ERR_INVALID_WAREHOUSE` instead of throwing an unhandled NullPointer in the allocation layer.\n* **Relational Safety**: Verify no database rows are created in the draft ledger." }
+  { 
+    q: "Generate cancellation scenarios", 
+    r: `### AI Test Agent: Cancellation Service Validation
+
+#### 1. Complete cURL Request (Data populated from database)
+\`\`\`bash
+curl -X POST https://api.retail.dev/api/v1/cancellations/request \\
+  -H "Content-Type: application/json" \\
+  -H "Authorization: Bearer mock-jwt-token-xyz" \\
+  -d '{
+    "orderId": "ORD-99218",
+    "reason": "Customer requested cancellation within 2 hours of payment placement"
+  }'
+\`\`\`
+
+#### 2. Database Context (Linked Entities Audit)
+* Selected **\`ORD-99218\`** from \`orders\` table (customer: \`CUST-5512\`, status: \`PENDING\`, total: \`149.99\`).
+* Relational dependencies check: Item allocation \`ITEM-1\` (product \`PROD-882\`) will be automatically released back to inventory stock.
+
+#### 3. Business Logic Explanation (Source Code Audit)
+* **Threshold Verification**: Under the 2-hour payment window rules, this request qualifies for automated settlement processing with zero supervisor tags.
+* **Schema Validation Enforced**: The \`reason\` field is 68 characters, passing the DTO constraint (\`@Size(min=10, max=250)\`).` 
+  },
+  { 
+    q: "Test Transfer Order with invalid warehouse", 
+    r: `### AI Test Agent: Warehouse Transfer Service Validation
+
+#### 1. Complete cURL Request (Data populated from database)
+\`\`\`bash
+curl -X POST https://api.retail.dev/api/v1/warehouse/transfer \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "transferOrderId": "TO-5512",
+    "sourceWarehouseId": "WH-001",
+    "destinationWarehouseId": "WH-999",
+    "productId": "PROD-882",
+    "quantity": 10
+  }'
+\`\`\`
+
+#### 2. Database Context (Linked Entities Audit)
+* Checked source entity **\`WH-001\`** (status: \`ACTIVE\`, holds sufficient stock of product \`PROD-882\`).
+* Checked target entity **\`WH-999\`** → Query failed to return rows.
+
+#### 3. Business Logic Explanation (Source Code Audit)
+* **Validation Failure**: The destination warehouse ID fails check in \`WarehouseRegistry.isValid()\`, throwing an explicit \`InvalidWarehouseException\`.
+* **Relational Safety**: The database transaction is rolled back, preventing creation of corrupted records in the inventory movements ledger.` 
+  }
 ];
 
 export default function DemoDashboard({ isOpen, onClose, initialProject }) {
