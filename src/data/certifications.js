@@ -3,13 +3,13 @@ const certifications = [
     title: 'Supervised Machine Learning: Regression and Classification',
     issuer: 'Stanford University & DeepLearning.AI',
     date: '2024',
-    credentialUrl: 'https://coursera.org/verify/specialization/machine-learning',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/6RVBAZDB5TMZ',
   },
   {
     title: 'Advanced Learning Algorithms',
     issuer: 'Stanford University & DeepLearning.AI',
     date: '2024',
-    credentialUrl: 'https://coursera.org/verify/specialization/machine-learning',
+    credentialUrl: 'https://www.coursera.org/account/accomplishments/specialization/6RVBAZDB5TMZ',
   },
   {
     title: 'Spring: Framework In Depth',
